@@ -3,7 +3,8 @@ package com.example.lgmvip_task1;
 public class Model {
     String name,notes,active,confirmed, migrate,deceased,recovered,dconfirmed,ddeceased,drecovered;
 
-    Model(String name,String notes,String active,String confirmed, String migrate,String deceased,String recovered,String dconfirmed,String ddeceased,String drecovered)
+    Model(String name,String notes,String active,String confirmed, String migrate,String deceased,
+          String recovered,String dconfirmed,String ddeceased,String drecovered)
     {
         this.name = name;
         this.notes = notes;
@@ -15,6 +16,20 @@ public class Model {
         this.dconfirmed = dconfirmed;
         this.ddeceased = ddeceased;
         this.drecovered = drecovered;
+    }
+    Model(String stateName, String totalActive,String totalConfirmed,String totalMigrated,String totalDeceased,
+          String totalRecovered, String totalDconfimed, String totalDdeceased,String totalDrecovered)
+    {
+        this.name = stateName;
+        this.active = totalActive;
+        this.confirmed = totalConfirmed;
+        this.migrate = totalMigrated;
+        this.deceased = totalDeceased;
+        this.recovered = totalRecovered;
+        this.dconfirmed = totalDconfimed;
+        this.ddeceased = totalDdeceased;
+        this.drecovered = totalDrecovered;
+
     }
 
     public String getName() {
